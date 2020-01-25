@@ -14,17 +14,14 @@ for linhaSilaba in range(len(word)):
 	for colunaSilaba in range(1):
 		
 		for consProc in range(len(cons)):
-			# print(str(word[linhaSilaba]) + " == " + str(cons[consProc].upper()))
 			
-			# igual a consoante inicio
+			# IGUAL A CONSOANTE INICIO
 			if (word[linhaSilaba] == cons[consProc].upper()):
-				# print("encontrei um " + str(word[linhaSilaba]) + " na posicao --> " + str(linhaSilaba))
 				c.append(linhaSilaba)
 				lenSW += 1
 
 		for vogProc in range(len(vog)):
 			if (word[linhaSilaba] == vog[vogProc].upper()):
-				# print("encontrei um " + str(word[linhaSilaba]) + " na posicao --> " + str(linhaSilaba))
 				v.append(linhaSilaba)
 				lenSW += 1
 
@@ -41,7 +38,8 @@ for linhaSW in range(3):
 print()
 print("Posições das silabas no array [indexInicialSilaba, consoante, vogal] --> " + str(sepSlb))
 print()
+
+# MOSTRAR PALAVRA EM SILABAS
 for linhaShow in range(3):
 	for colunaShow in range(1):
-		# print("valor --> " + str(sepSlb[linhaShow][1]))
 		print(word[ sepSlb[linhaShow][1] :][: sepSlb[linhaShow][2] ])
