@@ -12,11 +12,13 @@ pathSave  = "./" + newFolder + "/"
 # Limite de Coluna estabelecido para salvamento/Atualização
 limitColumn = 78
 
+
 # Inicialização do Sistema
 print("ATENÇÃO NÃO COLOQUE SEUS ARQUIVOS NA PASTA: [NOVO]")
 print("POIS ELA SERA ATUALIZADA!")
 print("Coloque seus arquivos na pasta: [pasta1].")
 print("Pressione Enter, quando estiver pronto...")
+x = input("Pronto?")
 
 # exclui um diretório e todo o seu conteúdo.
 shutil.rmtree(pathSave)
