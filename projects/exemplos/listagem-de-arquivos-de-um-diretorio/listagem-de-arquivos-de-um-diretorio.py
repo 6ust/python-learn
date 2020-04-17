@@ -1,16 +1,19 @@
+# LISTAGEM DE TODOS OS ARQUIVOS DE UM DIRETORIO
+
+#REFERENCIA
+# https://mkyong.com/python/python-how-to-list-all-files-in-a-directory/
+
 import os
 
-# Comando do prompt para listagem de arquivos dentro de uma Pasta / Diretório
-# print(os.listdir("./pasta1/"))
+pathFiles = 'C:\\Users\\gustavoguedes\\Documents\\programming-language\\python\\ambiente-de-testes-brq\\listagem-de-arquivos-de-um-diretorio\\th\\'
 
+files = []
 
-limitColumn = 30
-path = "./pasta1/"
-x = os.listdir(path)
+# r = Root, d = Directories, f = Files
+for r, d, f in os.walk(pathFiles):
+	for file in f:
+		if  '' in file:
+			files.append(os.path.join(r, file))
 
-for file in x:
-	print('_____________')
-	print(file)
-	readF = open(path + file, "r", encoding="utf8")
-	for readL in readF:
-		print(readL[:][:limitColumn])
+for f in files:
+	print(f[len(pathFiles):])
